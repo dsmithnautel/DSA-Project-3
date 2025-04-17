@@ -29,7 +29,6 @@ int main() {
     auto ratings = DataLoader::loadRatings("/Users/weh/CLionProjects/Project3_DSA/data/u.data");
     std::cout << "Loaded ratings: " << ratings.size() << "\n";
 
-    // Load movie names
     auto movieNames = loadMovieNames("/Users/weh/CLionProjects/Project3_DSA/data/u.item");
 
     GraphRecommender gr;
@@ -43,10 +42,8 @@ int main() {
     auto graphRecs = gr.recommend(1);
     auto hashRecs = hr.recommend(1);
 
-    // Limit the number of recommendations to the top 10
     int topN = 10;
 
-    // Slice the vectors to get the top N recommendations for both systems
     if (graphRecs.size() > topN) {
         graphRecs = std::vector<int>(graphRecs.begin(), graphRecs.begin() + topN);
     }
