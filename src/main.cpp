@@ -5,6 +5,8 @@
 #include <unordered_map>
 #include <fstream>
 #include <sstream>
+#include <random>
+#include <set>
 
 std::unordered_map<int, std::string> loadMovieNames(const std::string& filename) {
     std::unordered_map<int, std::string> movieNames;
@@ -24,6 +26,32 @@ std::unordered_map<int, std::string> loadMovieNames(const std::string& filename)
     return movieNames;
 }
 
+void exportRecommendationsToDOT(const std::unordered_map<int, std::string>& movieNames,
+                                const std::vector<int>& recommendedMovies,
+                                int userId,
+                                const std::string& filename,
+                                const std::string& title) {
+    std::ofstream file(filename);
+    file << "digraph G {\n";
+    file << "    label=\"" << title << "\";\n";
+    file << "    labelloc=top;\n";
+    file << "    fontsize=20;\n";
+    file << "    node [style=filled, fillcolor=lightblue];\n";
+
+    std::string userNode = "User" + std::to_string(userId);
+    file << "    \"" << userNode << "\" [shape=box, fillcolor=lightgreen];\n";
+
+    for (int movieId : recommendedMovies) {
+        std::string movieNode = "Movie" + std::to_string(movieId);
+        file << "    \"" << userNode << "\" -> \"" << movieNode
+             << "\" [label=\"Recommended\", color=red];\n";
+        file << "    \"" << movieNode << "\" [label=\"" << movieNames.at(movieId) << "\"];\n";
+    }
+
+    file << "}\n";
+    file.close();
+}
+
 
 int main() {
     auto ratings = DataLoader::loadRatings("/Users/weh/CLionProjects/Project3_DSA/data/u.data");
@@ -39,26 +67,38 @@ int main() {
         hr.addRating(r.userId, r.movieId, r.rating);
     }
 
-    auto graphRecs = gr.recommend(1);
-    auto hashRecs = hr.recommend(1);
-
+    int userId = 1;
     int topN = 10;
 
-    if (graphRecs.size() > topN) {
-        graphRecs = std::vector<int>(graphRecs.begin(), graphRecs.begin() + topN);
-    }
+    auto originalHashRecs = hr.recommend(userId, topN);
 
-    if (hashRecs.size() > topN) {
-        hashRecs = std::vector<int>(hashRecs.begin(), hashRecs.begin() + topN);
-    }
-
-    std::cout << "Graph Recommendations for user 1:\n";
-    for (int m : graphRecs) {
+    std::cout << "\nOriginal HashTable Recommendations for user " << userId << ":\n";
+    for (int m : originalHashRecs) {
         std::cout << movieNames[m] << " (ID " << m << ")\n";
     }
 
-    std::cout << "\nHashTable Recommendations for user 1:\n";
-    for (int m : hashRecs) {
+    // Simulate user watching 3 movies from original recommendations
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::shuffle(originalHashRecs.begin(), originalHashRecs.end(), gen);
+
+    int simulatedRatings = std::min(3, static_cast<int>(originalHashRecs.size()));
+    for (int i = 0; i < simulatedRatings; ++i) {
+        int movieId = originalHashRecs[i];
+        int rating = 3 + (gen() % 3); // Give a rating between 3 and 5
+        std::cout << "\nSimulating rating movie ID " << movieId << ": \"" << movieNames[movieId] << "\" with " << rating << "/5\n";
+        hr.addRating(userId, movieId, rating);
+    }
+
+    auto updatedHashRecs = hr.recommend(userId, topN);
+
+    std::cout << "\nUpdated HashTable Recommendations for user " << userId << ":\n";
+    for (int m : updatedHashRecs) {
         std::cout << movieNames[m] << " (ID " << m << ")\n";
     }
+
+    exportRecommendationsToDOT(movieNames, originalHashRecs, userId, "hashRecs_before.dot", "HashTable Recommendations - Before");
+    exportRecommendationsToDOT(movieNames, updatedHashRecs, userId, "hashRecs_after.dot", "HashTable Recommendations - After");
+
+    return 0;
 }
