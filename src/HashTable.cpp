@@ -39,7 +39,7 @@ std::vector<int> HashTableRecommender::recommend(int userId, int topN) {
     }
 
     std::sort(sortedMovies.begin(), sortedMovies.end(), [](const auto& a, const auto& b) {
-        return b.second > a.second;
+        return b.second < a.second;
     });
 
     std::vector<int> recommendations;
