@@ -6,6 +6,7 @@
 #include <fstream>
 #include <sstream>
 #include <random>
+#include <algorithm>
 #include <set>
 
 std::unordered_map<int, std::string> loadMovieNames(const std::string& filename) {
@@ -54,10 +55,12 @@ void exportRecommendationsToDOT(const std::unordered_map<int, std::string>& movi
 
 
 int main() {
-    auto ratings = DataLoader::loadRatings("/Users/weh/CLionProjects/Project3_DSA/data/u.data");
+    auto ratings = DataLoader::loadRatings("../data/u.data");
     std::cout << "Loaded ratings: " << ratings.size() << "\n";
 
-    auto movieNames = loadMovieNames("/Users/weh/CLionProjects/Project3_DSA/data/u.item");
+    auto movieNames = loadMovieNames("../data/u.item");
+
+    auto movies = DataLoader::loadMovies("../data/u.item");
 
     GraphRecommender gr;
     HashTableRecommender hr;
@@ -77,6 +80,8 @@ int main() {
         std::cout << movieNames[m] << " (ID " << m << ")\n";
     }
 
+
+
     // Simulate user watching 3 movies from original recommendations
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -94,6 +99,19 @@ int main() {
 
     std::cout << "\nUpdated HashTable Recommendations for user " << userId << ":\n";
     for (int m : updatedHashRecs) {
+        std::cout << movieNames[m] << " (ID " << m << ")\n";
+    }
+
+    auto graphRecs = gr.recommend(userId, topN);
+
+    std::cout << "\nOriginal Graph Recommendations for user " << userId << ":\n";
+    for (int m : graphRecs) {
+        std::cout << movieNames[m] << " (ID " << m << ")\n";
+    }
+
+    auto genreRecs = gr.recommendGenre(userId, movies, topN);
+    std::cout << "\nGraph Genre Recommendations for user " << userId << ":\n";
+    for (int m : genreRecs) {
         std::cout << movieNames[m] << " (ID " << m << ")\n";
     }
 

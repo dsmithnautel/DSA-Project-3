@@ -16,7 +16,7 @@ private:
 public:
     void addRating(int userId, int movieId, int rating);
     std::vector<int> recommendGenre(int userId, const std::unordered_map<int, Movie>& movies, int topN = 10);
-    std::vector<int> recommend(int userId);
+    std::vector<int> recommend(int userId, int topN = 10);
 };
 
 

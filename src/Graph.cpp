@@ -61,7 +61,7 @@ std::vector<int> GraphRecommender::recommendGenre(const int userId,
     return recommendations;
 }
 
-std::vector<int> GraphRecommender::recommend(const int userId) {
+std::vector<int> GraphRecommender::recommend(const int userId, int topN) {
     std::unordered_set<int> seenMovies;
     std::vector<int> recommendations;
 
@@ -83,5 +83,11 @@ std::vector<int> GraphRecommender::recommend(const int userId) {
         recommendations.push_back(movieId);
     }
 
-    return recommendations;
+    // take topN movieIDs
+    std::vector<int> topRecommendations;
+    for (int i = 0; i < topN && i < recommendations.size(); i++) {
+        topRecommendations.push_back(recommendations[i]);
+    }
+
+    return topRecommendations;
 }
