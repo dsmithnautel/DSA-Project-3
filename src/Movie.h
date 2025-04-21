@@ -6,13 +6,18 @@
 #define PROJECT3_DSA_MOVIE_H
 
 #include <string>
+#include <vector>
 
 class Movie {
 public:
     int id;
     std::string title;
+    std::vector<int> genres;
 
-    Movie(int id = 0, const std::string& title = "") : id(id), title(title) {}
+    Movie(int id = 0,
+          const std::string& title = "",
+          const std::vector<int>& genres = std::vector<int>(19,0))
+    : id(id), title(title), genres(genres) {}
 };
 
 
