@@ -12,7 +12,7 @@ class Movie {
 public:
     int id;
     std::string title;
-    std::vector<int> genres;
+    std::vector<int> genres; // 19 long vector, either 0 or 1
 
     Movie(int id = 0,
           const std::string& title = "",
