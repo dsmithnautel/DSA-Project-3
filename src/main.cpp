@@ -218,6 +218,19 @@ int main() {
         std::cout << movieNames[m] << " (ID " << m << ")\n";
     }
 
+    auto genreRecs = gr.recommendGenre(userId, movies, topN);
+    std::cout << "\nGraph Genre Recommendations for user " << userId << ":\n";
+    for (int m : genreRecs) {
+        std::cout << movieNames[m] << " (ID " << m << ")\n";
+    }
+
+    auto htGenreRecs = hr.recommendGenre(userId, movieMap, topN);
+    std::cout << "\nHashTable Genre Recommendations for user " << userId << ":\n";
+    for (int m : htGenreRecs) {
+        std::cout << movieNames[m] << " (ID " << m << ")\n";
+    }
+
+
 
 
     // Simulate user watching 3 movies from original recommendations
@@ -247,11 +260,6 @@ int main() {
         std::cout << movieNames[m] << " (ID " << m << ")\n";
     }
 
-    auto genreRecs = gr.recommendGenre(userId, movies, topN);
-    std::cout << "\nGraph Genre Recommendations for user " << userId << ":\n";
-    for (int m : genreRecs) {
-        std::cout << movieNames[m] << " (ID " << m << ")\n";
-    }
 
     exportRecommendationsToDOT(movieNames, originalHashRecs, userId, "hashRecs_before.dot", "HashTable Recommendations - Before");
     exportRecommendationsToDOT(movieNames, updatedHashRecs, userId, "hashRecs_after.dot", "HashTable Recommendations - After");
