@@ -23,6 +23,26 @@ std::unordered_map<std::string, int> createGenreIndexMap() {
     return map;
 }
 
+std::string formatGenres(const std::vector<int>& genreFlags) {
+    std::vector<std::string> genres;
+
+    for (int i = 0; i < genreFlags.size(); ++i) {
+        if (genreFlags[i] == 1 && i < genreList.size()) {
+            genres.push_back(genreList[i]);
+        }
+    }
+
+    if (genres.empty()) return "None";
+
+    std::ostringstream oss;
+    for (size_t i = 0; i < genres.size(); ++i) {
+        if (i > 0) oss << ", ";
+        oss << genres[i];
+    }
+
+    return oss.str();
+}
+
 int getNextAvailableMovieId(const std::unordered_map<int, std::string>& movieNames) {
     int maxId = 0;
     for (const auto& pair : movieNames) {
@@ -48,30 +68,41 @@ void addUserMoviesWithRatings(std::unordered_map<int, std::string>& movieNames,
     while (true) {
         std::cout << "\nMovie name (or 'done'): ";
         std::getline(std::cin, input);
-        if (input == "done") break;
         std::string name = input;
-
-        std::cout << "Genres (comma-separated, e.g., Action,Comedy): ";
-        std::getline(std::cin, input);
         if (input == "done") break;
+
+        std::cout << "\nAvailable genres:\n";
+        for (const auto& genre : genreList) {
+            std::cout << "- " << genre << "\n";
+        }
+        std::cout << "\nGenres (comma-separated and case sensitive, e.g., Action,Comedy,Horror): ";
+        std::getline(std::cin, input);
 
         std::vector<int> genreVector(19, 0);
         auto genreMap = createGenreIndexMap();
 
         std::stringstream ss(input);
         std::string genre;
+        bool foundValidGenre = false;
+
         while (std::getline(ss, genre, ',')) {
-            // Trim whitespace
             genre.erase(remove_if(genre.begin(), genre.end(), ::isspace), genre.end());
             std::transform(genre.begin(), genre.end(), genre.begin(), ::tolower);
-            for (auto& pair : genreMap) {
+            for (const auto& pair : genreMap) {
                 std::string lowered = pair.first;
                 std::transform(lowered.begin(), lowered.end(), lowered.begin(), ::tolower);
                 if (genre == lowered) {
                     genreVector[pair.second] = 1;
+                    foundValidGenre = true;
+                    break;
                 }
             }
         }
+
+        if (!foundValidGenre) {
+            genreVector[0] = 1; // Set to "unknown"
+        }
+
 
         std::cout << "Your rating for \"" << name << "\" (1-5): ";
         int rating;
@@ -95,9 +126,9 @@ void addUserMoviesWithRatings(std::unordered_map<int, std::string>& movieNames,
         hr.addRating(userId, nextId, rating);
         gr.addRating(userId, nextId, rating);
 
-        std::cout << "✅ Added \"" << name << "\" with rating " << rating << "/5 and genres [";
-        for (const auto& g : genreVector) std::cout << g << " ";
-        std::cout << "]\n";
+        std::cout << "✅ Added \"" << name << "\" with rating " << rating
+                  << "/5 and genres: " << formatGenres(genreVector) << "\n";
+
 
         ++nextId;
     }
@@ -140,7 +171,13 @@ void exportRecommendationsToDOT(const std::unordered_map<int, std::string>& movi
         std::string movieNode = "Movie" + std::to_string(movieId);
         file << "    \"" << userNode << "\" -> \"" << movieNode
              << "\" [label=\"Recommended\", color=red];\n";
-        file << "    \"" << movieNode << "\" [label=\"" << movieNames.at(movieId) << "\"];\n";
+            auto it = movieNames.find(movieId);
+            if (it != movieNames.end()) {
+                file << "    \"" << movieNode << "\" [label=\"" << it->second << "\"];\n";
+            } else {
+                file << "    \"" << movieNode << "\" [label=\"Unknown\"];\n";
+            }
+            // file << "    \"" << movieNode << "\" [label=\"" << movieNames.at(movieId) << "\"];\n";
     }
 
     file << "}\n";
