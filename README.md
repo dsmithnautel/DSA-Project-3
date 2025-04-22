@@ -1,0 +1,20 @@
+To run the program:
+
+Make sure you have the following:
+
+A C++17 (or newer) compatible compiler (e.g., g++, clang++)
+A terminal or command line interface
+All header (.h) and source (.cpp) files in the same project directory
+The dataset files:
+u.data – contains user ratings
+u.item – contains movie information
+These files should be placed inside a folder called data/ at the root of the project
+
+Once running, the program will:
+
+Load movie ratings and data
+Prompt the user to add their own movies with genres and ratings
+ - The user input should follow the format of the examples shown
+Generate and display recommendations using both a graph-based and hash table-based recommender
+Simulate re-ratings to show updated recommendations
+Export a DOT file visualization (if applicable in your code)
