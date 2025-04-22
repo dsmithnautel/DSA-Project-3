@@ -12,9 +12,11 @@ These files should be placed inside a folder called data/ at the root of the pro
 
 Once running, the program will:
 
-Load movie ratings and data
-Prompt the user to add their own movies with genres and ratings
- - The user input should follow the format of the examples shown
-Generate and display recommendations using both a graph-based and hash table-based recommender
-Simulate re-ratings to show updated recommendations
-Export a DOT file visualization (if applicable in your code)
+1. Load movie ratings and data
+2. Prompt the user to add their own movies with genres and ratings
+
+   - The user input should follow the format of the examples shown when the program asks for input
+
+3. Generate and display recommendations using both a graph-based and hash table-based recommender
+4. Simulate re-ratings to show updated recommendations
+5. Export a DOT file visualization (if applicable in your code)
