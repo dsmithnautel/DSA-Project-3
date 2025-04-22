@@ -8,6 +8,13 @@
 #include <random>
 #include <algorithm>
 #include <set>
+#include "imgui.h"
+#include "backends/imgui_impl_glfw.h"
+#include "backends/imgui_impl_opengl3.h"
+#include <GLFW/glfw3.h> // Will include glad if you add it later
+#include <vector>
+#include <string>
+
 
 const std::vector<std::string> genreList = {
         "unknown", "Action", "Adventure", "Animation", "Children's", "Comedy", "Crime",
@@ -186,6 +193,7 @@ void exportRecommendationsToDOT(const std::unordered_map<int, std::string>& movi
 
 
 int main() {
+    /* Cout testing without visuals
     auto ratings = DataLoader::loadRatings("../data/u.data");
     std::cout << "Loaded ratings: " << ratings.size() << "\n";
 
@@ -252,9 +260,184 @@ int main() {
     for (int m : genreRecs) {
         std::cout << movieNames[m] << " (ID " << m << ")\n";
     }
+*/
+
+    std::vector<std::string> log_originalHashRecs;
+    std::vector<std::string> log_updatedHashRecs;
+    std::vector<std::string> log_graphRecs;
+    std::vector<std::string> log_genreRecs;
+
+
+
+    auto ratings = DataLoader::loadRatings("../data/u.data");
+
+    auto movieNames = loadMovieNames("../data/u.item");
+    auto movies = DataLoader::loadMovies("../data/u.item");
+
+    std::unordered_map<int, Movie> movieMap;
+    for (const auto& pair : movies) {
+        movieMap[pair.first] = pair.second;
+    }
+
+    GraphRecommender gr;
+    HashTableRecommender hr;
+
+    for (const auto& r : ratings) {
+        gr.addRating(r.userId, r.movieId, r.rating);
+        hr.addRating(r.userId, r.movieId, r.rating);
+    }
+
+    int userId = 1;
+    int topN = 10;
+
+    addUserMoviesWithRatings(movieNames, movieMap, hr, gr, userId);
+
+// Original HashTable recs
+    auto originalHashRecs = hr.recommend(userId, topN);
+    for (int m : originalHashRecs) {
+        log_originalHashRecs.push_back(movieNames[m] + " (ID " + std::to_string(m) + ")");
+    }
+
+// Simulated Ratings
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::shuffle(originalHashRecs.begin(), originalHashRecs.end(), gen);
+    int simulatedRatings = std::min(3, (int)originalHashRecs.size());
+    for (int i = 0; i < simulatedRatings; ++i) {
+        int movieId = originalHashRecs[i];
+        int rating = 3 + (gen() % 3);
+        hr.addRating(userId, movieId, rating);
+    }
+
+// Updated HashTable recs
+    auto updatedHashRecs = hr.recommend(userId, topN);
+    for (int m : updatedHashRecs) {
+        log_updatedHashRecs.push_back(movieNames[m] + " (ID " + std::to_string(m) + ")");
+    }
+
+// Graph recs
+    auto graphRecs = gr.recommend(userId, topN);
+    for (int m : graphRecs) {
+        log_graphRecs.push_back(movieNames[m] + " (ID " + std::to_string(m) + ")");
+    }
+
+// Genre-based graph recs
+    auto genreRecs = gr.recommendGenre(userId, movies, topN);
+    for (int m : genreRecs) {
+        log_genreRecs.push_back(movieNames[m] + " (ID " + std::to_string(m) + ")");
+    }
 
     exportRecommendationsToDOT(movieNames, originalHashRecs, userId, "hashRecs_before.dot", "HashTable Recommendations - Before");
     exportRecommendationsToDOT(movieNames, updatedHashRecs, userId, "hashRecs_after.dot", "HashTable Recommendations - After");
+
+
+
+
+    exportRecommendationsToDOT(movieNames, originalHashRecs, userId, "hashRecs_before.dot", "HashTable Recommendations - Before");
+    exportRecommendationsToDOT(movieNames, updatedHashRecs, userId, "hashRecs_after.dot", "HashTable Recommendations - After");
+
+
+
+
+
+
+
+
+
+
+
+    // Initialize GLFW
+    if (!glfwInit()) {
+        std::cerr << "Failed to initialize GLFW\n";
+        return -1;
+    }
+
+    // Set up OpenGL version (ImGui uses 3.0+)
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+    // Create window
+    GLFWwindow* window = glfwCreateWindow(800, 600, "ImGui + Project3_DSA", nullptr, nullptr);
+    if (!window) {
+        std::cerr << "Failed to create GLFW window\n";
+        glfwTerminate();
+        return -1;
+    }
+    glfwMakeContextCurrent(window);
+    glfwSwapInterval(1); // Enable vsync
+
+    // Setup ImGui context
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO(); (void)io;
+
+    // Set style
+    ImGui::StyleColorsDark();
+
+    // Initialize ImGui backends
+    ImGui_ImplGlfw_InitForOpenGL(window, true);
+    ImGui_ImplOpenGL3_Init("#version 330");
+
+    // Main loop
+    while (!glfwWindowShouldClose(window)) {
+        glfwPollEvents();
+
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
+
+        ImGui::Begin("Movie Recommender");
+
+        ImGui::Text("Original HashTable Recommendations:");
+        ImGui::BeginChild("orig_hash", ImVec2(0, 100), true);
+        for (const auto& line : log_originalHashRecs)
+            ImGui::Text("%s", line.c_str());
+        ImGui::EndChild();
+
+        ImGui::Text("Updated HashTable Recommendations:");
+        ImGui::BeginChild("updated_hash", ImVec2(0, 100), true);
+        for (const auto& line : log_updatedHashRecs)
+            ImGui::Text("%s", line.c_str());
+        ImGui::EndChild();
+
+        ImGui::Text("Original Graph Recommendations:");
+        ImGui::BeginChild("graph_recs", ImVec2(0, 100), true);
+        for (const auto& line : log_graphRecs)
+            ImGui::Text("%s", line.c_str());
+        ImGui::EndChild();
+
+        ImGui::Text("Graph Genre Recommendations:");
+        ImGui::BeginChild("genre_recs", ImVec2(0, 100), true);
+        for (const auto& line : log_genreRecs)
+            ImGui::Text("%s", line.c_str());
+        ImGui::EndChild();
+
+        ImGui::End();
+
+
+        // Render
+        ImGui::Render();
+        int display_w, display_h;
+        glfwGetFramebufferSize(window, &display_w, &display_h);
+        glViewport(0, 0, display_w, display_h);
+        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+        glfwSwapBuffers(window);
+
+
+    }
+
+    // Cleanup
+    ImGui_ImplOpenGL3_Shutdown();
+    ImGui_ImplGlfw_Shutdown();
+    ImGui::DestroyContext();
+    glfwDestroyWindow(window);
+    glfwTerminate();
+
+
 
     return 0;
 }

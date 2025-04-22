@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/weh/CLionProjects/Project3_DSA/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target Project3_DSA
 
@@ -47,37 +47,91 @@ cmake_ninja_workdir = /Users/weh/CLionProjects/Project3_DSA/cmake-build-debug/
 #############################################
 # Order-only phony target for Project3_DSA
 
-build cmake_object_order_depends_target_Project3_DSA: phony || .
+build cmake_object_order_depends_target_Project3_DSA: phony || cmake_object_order_depends_target_glfw
 
-build CMakeFiles/Project3_DSA.dir/src/main.cpp.o: CXX_COMPILER__Project3_DSA_unscanned_Debug /Users/weh/CLionProjects/Project3_DSA/src/main.cpp || cmake_object_order_depends_target_Project3_DSA
-  DEP_FILE = CMakeFiles/Project3_DSA.dir/src/main.cpp.o.d
-  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/Project3_DSA.dir
-  OBJECT_FILE_DIR = CMakeFiles/Project3_DSA.dir/src
+build CMakeFiles/Project3_DSA.dir/src/main.cpp.obj: CXX_COMPILER__Project3_DSA_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/src/main.cpp || cmake_object_order_depends_target_Project3_DSA
+  DEP_FILE = CMakeFiles\Project3_DSA.dir\src\main.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/backends -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include
+  OBJECT_DIR = CMakeFiles\Project3_DSA.dir
+  OBJECT_FILE_DIR = CMakeFiles\Project3_DSA.dir\src
 
-build CMakeFiles/Project3_DSA.dir/src/DataLoader.cpp.o: CXX_COMPILER__Project3_DSA_unscanned_Debug /Users/weh/CLionProjects/Project3_DSA/src/DataLoader.cpp || cmake_object_order_depends_target_Project3_DSA
-  DEP_FILE = CMakeFiles/Project3_DSA.dir/src/DataLoader.cpp.o.d
-  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/Project3_DSA.dir
-  OBJECT_FILE_DIR = CMakeFiles/Project3_DSA.dir/src
+build CMakeFiles/Project3_DSA.dir/src/DataLoader.cpp.obj: CXX_COMPILER__Project3_DSA_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/src/DataLoader.cpp || cmake_object_order_depends_target_Project3_DSA
+  DEP_FILE = CMakeFiles\Project3_DSA.dir\src\DataLoader.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/backends -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include
+  OBJECT_DIR = CMakeFiles\Project3_DSA.dir
+  OBJECT_FILE_DIR = CMakeFiles\Project3_DSA.dir\src
 
-build CMakeFiles/Project3_DSA.dir/src/User.cpp.o: CXX_COMPILER__Project3_DSA_unscanned_Debug /Users/weh/CLionProjects/Project3_DSA/src/User.cpp || cmake_object_order_depends_target_Project3_DSA
-  DEP_FILE = CMakeFiles/Project3_DSA.dir/src/User.cpp.o.d
-  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/Project3_DSA.dir
-  OBJECT_FILE_DIR = CMakeFiles/Project3_DSA.dir/src
+build CMakeFiles/Project3_DSA.dir/src/User.cpp.obj: CXX_COMPILER__Project3_DSA_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/src/User.cpp || cmake_object_order_depends_target_Project3_DSA
+  DEP_FILE = CMakeFiles\Project3_DSA.dir\src\User.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/backends -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include
+  OBJECT_DIR = CMakeFiles\Project3_DSA.dir
+  OBJECT_FILE_DIR = CMakeFiles\Project3_DSA.dir\src
 
-build CMakeFiles/Project3_DSA.dir/src/HashTable.cpp.o: CXX_COMPILER__Project3_DSA_unscanned_Debug /Users/weh/CLionProjects/Project3_DSA/src/HashTable.cpp || cmake_object_order_depends_target_Project3_DSA
-  DEP_FILE = CMakeFiles/Project3_DSA.dir/src/HashTable.cpp.o.d
-  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/Project3_DSA.dir
-  OBJECT_FILE_DIR = CMakeFiles/Project3_DSA.dir/src
+build CMakeFiles/Project3_DSA.dir/src/HashTable.cpp.obj: CXX_COMPILER__Project3_DSA_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/src/HashTable.cpp || cmake_object_order_depends_target_Project3_DSA
+  DEP_FILE = CMakeFiles\Project3_DSA.dir\src\HashTable.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/backends -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include
+  OBJECT_DIR = CMakeFiles\Project3_DSA.dir
+  OBJECT_FILE_DIR = CMakeFiles\Project3_DSA.dir\src
 
-build CMakeFiles/Project3_DSA.dir/src/Graph.cpp.o: CXX_COMPILER__Project3_DSA_unscanned_Debug /Users/weh/CLionProjects/Project3_DSA/src/Graph.cpp || cmake_object_order_depends_target_Project3_DSA
-  DEP_FILE = CMakeFiles/Project3_DSA.dir/src/Graph.cpp.o.d
-  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/Project3_DSA.dir
-  OBJECT_FILE_DIR = CMakeFiles/Project3_DSA.dir/src
+build CMakeFiles/Project3_DSA.dir/src/Graph.cpp.obj: CXX_COMPILER__Project3_DSA_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/src/Graph.cpp || cmake_object_order_depends_target_Project3_DSA
+  DEP_FILE = CMakeFiles\Project3_DSA.dir\src\Graph.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/backends -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include
+  OBJECT_DIR = CMakeFiles\Project3_DSA.dir
+  OBJECT_FILE_DIR = CMakeFiles\Project3_DSA.dir\src
+
+build CMakeFiles/Project3_DSA.dir/external/imgui/backends/imgui_impl_glfw.cpp.obj: CXX_COMPILER__Project3_DSA_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/backends/imgui_impl_glfw.cpp || cmake_object_order_depends_target_Project3_DSA
+  DEP_FILE = CMakeFiles\Project3_DSA.dir\external\imgui\backends\imgui_impl_glfw.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/backends -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include
+  OBJECT_DIR = CMakeFiles\Project3_DSA.dir
+  OBJECT_FILE_DIR = CMakeFiles\Project3_DSA.dir\external\imgui\backends
+
+build CMakeFiles/Project3_DSA.dir/external/imgui/backends/imgui_impl_opengl3.cpp.obj: CXX_COMPILER__Project3_DSA_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/backends/imgui_impl_opengl3.cpp || cmake_object_order_depends_target_Project3_DSA
+  DEP_FILE = CMakeFiles\Project3_DSA.dir\external\imgui\backends\imgui_impl_opengl3.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/backends -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include
+  OBJECT_DIR = CMakeFiles\Project3_DSA.dir
+  OBJECT_FILE_DIR = CMakeFiles\Project3_DSA.dir\external\imgui\backends
+
+build CMakeFiles/Project3_DSA.dir/external/imgui/imgui.cpp.obj: CXX_COMPILER__Project3_DSA_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/imgui.cpp || cmake_object_order_depends_target_Project3_DSA
+  DEP_FILE = CMakeFiles\Project3_DSA.dir\external\imgui\imgui.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/backends -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include
+  OBJECT_DIR = CMakeFiles\Project3_DSA.dir
+  OBJECT_FILE_DIR = CMakeFiles\Project3_DSA.dir\external\imgui
+
+build CMakeFiles/Project3_DSA.dir/external/imgui/imgui_demo.cpp.obj: CXX_COMPILER__Project3_DSA_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/imgui_demo.cpp || cmake_object_order_depends_target_Project3_DSA
+  DEP_FILE = CMakeFiles\Project3_DSA.dir\external\imgui\imgui_demo.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/backends -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include
+  OBJECT_DIR = CMakeFiles\Project3_DSA.dir
+  OBJECT_FILE_DIR = CMakeFiles\Project3_DSA.dir\external\imgui
+
+build CMakeFiles/Project3_DSA.dir/external/imgui/imgui_draw.cpp.obj: CXX_COMPILER__Project3_DSA_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/imgui_draw.cpp || cmake_object_order_depends_target_Project3_DSA
+  DEP_FILE = CMakeFiles\Project3_DSA.dir\external\imgui\imgui_draw.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/backends -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include
+  OBJECT_DIR = CMakeFiles\Project3_DSA.dir
+  OBJECT_FILE_DIR = CMakeFiles\Project3_DSA.dir\external\imgui
+
+build CMakeFiles/Project3_DSA.dir/external/imgui/imgui_tables.cpp.obj: CXX_COMPILER__Project3_DSA_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/imgui_tables.cpp || cmake_object_order_depends_target_Project3_DSA
+  DEP_FILE = CMakeFiles\Project3_DSA.dir\external\imgui\imgui_tables.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/backends -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include
+  OBJECT_DIR = CMakeFiles\Project3_DSA.dir
+  OBJECT_FILE_DIR = CMakeFiles\Project3_DSA.dir\external\imgui
+
+build CMakeFiles/Project3_DSA.dir/external/imgui/imgui_widgets.cpp.obj: CXX_COMPILER__Project3_DSA_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_Project3_DSA
+  DEP_FILE = CMakeFiles\Project3_DSA.dir\external\imgui\imgui_widgets.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui -IC:/Users/Derek/CLionProjects/Project3_DSA/external/imgui/backends -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include
+  OBJECT_DIR = CMakeFiles\Project3_DSA.dir
+  OBJECT_FILE_DIR = CMakeFiles\Project3_DSA.dir\external\imgui
 
 
 # =============================================================================
@@ -85,22 +139,24 @@ build CMakeFiles/Project3_DSA.dir/src/Graph.cpp.o: CXX_COMPILER__Project3_DSA_un
 
 
 #############################################
-# Link the executable Project3_DSA
+# Link the executable Project3_DSA.exe
 
-build Project3_DSA: CXX_EXECUTABLE_LINKER__Project3_DSA_Debug CMakeFiles/Project3_DSA.dir/src/main.cpp.o CMakeFiles/Project3_DSA.dir/src/DataLoader.cpp.o CMakeFiles/Project3_DSA.dir/src/User.cpp.o CMakeFiles/Project3_DSA.dir/src/HashTable.cpp.o CMakeFiles/Project3_DSA.dir/src/Graph.cpp.o
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk
-  OBJECT_DIR = CMakeFiles/Project3_DSA.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = Project3_DSA
-  TARGET_PDB = Project3_DSA.dbg
+build Project3_DSA.exe: CXX_EXECUTABLE_LINKER__Project3_DSA_Debug CMakeFiles/Project3_DSA.dir/src/main.cpp.obj CMakeFiles/Project3_DSA.dir/src/DataLoader.cpp.obj CMakeFiles/Project3_DSA.dir/src/User.cpp.obj CMakeFiles/Project3_DSA.dir/src/HashTable.cpp.obj CMakeFiles/Project3_DSA.dir/src/Graph.cpp.obj CMakeFiles/Project3_DSA.dir/external/imgui/backends/imgui_impl_glfw.cpp.obj CMakeFiles/Project3_DSA.dir/external/imgui/backends/imgui_impl_opengl3.cpp.obj CMakeFiles/Project3_DSA.dir/external/imgui/imgui.cpp.obj CMakeFiles/Project3_DSA.dir/external/imgui/imgui_demo.cpp.obj CMakeFiles/Project3_DSA.dir/external/imgui/imgui_draw.cpp.obj CMakeFiles/Project3_DSA.dir/external/imgui/imgui_tables.cpp.obj CMakeFiles/Project3_DSA.dir/external/imgui/imgui_widgets.cpp.obj | _deps/glfw-build/src/libglfw3.a || _deps/glfw-build/src/libglfw3.a
+  FLAGS = -g
+  LINK_LIBRARIES = _deps/glfw-build/src/libglfw3.a  -lopengl32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Project3_DSA.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Project3_DSA.exe
+  TARGET_IMPLIB = libProject3_DSA.dll.a
+  TARGET_PDB = Project3_DSA.exe.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/weh/CLionProjects/Project3_DSA/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -111,15 +167,497 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/weh/CLionProjects/Project3_DSA/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/weh/CLionProjects/Project3_DSA -B/Users/weh/CLionProjects/Project3_DSA/cmake-build-debug
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\Derek\CLionProjects\Project3_DSA -BC:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Derek/CLionProjects/Project3_DSA/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for uninstall
+
+build _deps/glfw-build/uninstall: phony _deps/glfw-build/CMakeFiles/uninstall
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/glfw-build/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug\_deps\glfw-build && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build _deps/glfw-build/edit_cache: phony _deps/glfw-build/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/glfw-build/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug\_deps\glfw-build && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\Derek\CLionProjects\Project3_DSA -BC:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/rebuild_cache: phony _deps/glfw-build/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build _deps/glfw-build/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build _deps/glfw-build/CMakeFiles/install.util: CUSTOM_COMMAND _deps/glfw-build/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug\_deps\glfw-build && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/install: phony _deps/glfw-build/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build _deps/glfw-build/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/glfw-build/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug\_deps\glfw-build && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/install/local: phony _deps/glfw-build/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build _deps/glfw-build/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/glfw-build/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug\_deps\glfw-build && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/install/strip: phony _deps/glfw-build/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for _deps\glfw-build\CMakeFiles\uninstall
+
+build _deps/glfw-build/CMakeFiles/uninstall | ${cmake_ninja_workdir}_deps/glfw-build/CMakeFiles/uninstall: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug\_deps\glfw-build && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -P C:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/cmake_uninstall.cmake"
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Order-only phony target for glfw
+
+build cmake_object_order_depends_target_glfw: phony || .
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/context.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\context.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/init.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\init.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/input.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/input.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\input.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/monitor.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\monitor.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/platform.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/platform.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\platform.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/vulkan.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/vulkan.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\vulkan.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/window.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\window.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/egl_context.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/egl_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\egl_context.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/osmesa_context.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/osmesa_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\osmesa_context.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/null_init.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/null_init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\null_init.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/null_monitor.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/null_monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\null_monitor.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/null_window.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/null_window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\null_window.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/null_joystick.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/null_joystick.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\null_joystick.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/win32_module.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/win32_module.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\win32_module.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/win32_time.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/win32_time.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\win32_time.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/win32_thread.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/win32_thread.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\win32_thread.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/win32_init.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/win32_init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\win32_init.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/win32_joystick.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/win32_joystick.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\win32_joystick.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/win32_monitor.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/win32_monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\win32_monitor.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/win32_window.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/win32_window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\win32_window.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/wgl_context.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src/wgl_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = _deps\glfw-build\src\CMakeFiles\glfw.dir\wgl_context.c.obj.d
+  FLAGS = -g -std=c99 -fdiagnostics-color=always -Wall
+  INCLUDES = -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/include -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/src -IC:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Link the static library _deps\glfw-build\src\libglfw3.a
+
+build _deps/glfw-build/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Debug _deps/glfw-build/src/CMakeFiles/glfw.dir/context.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/init.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/input.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/monitor.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/platform.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/vulkan.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/window.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/egl_context.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/osmesa_context.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/null_init.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/null_monitor.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/null_window.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/null_joystick.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/win32_module.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/win32_time.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/win32_thread.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/win32_init.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/win32_joystick.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/win32_monitor.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/win32_window.c.obj _deps/glfw-build/src/CMakeFiles/glfw.dir/wgl_context.c.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps\glfw-build\src\CMakeFiles\glfw.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = _deps\glfw-build\src\libglfw3.a
+  TARGET_PDB = glfw3.a.dbg
+
+
+#############################################
+# Utility command for update_mappings
+
+build _deps/glfw-build/src/update_mappings: phony _deps/glfw-build/src/CMakeFiles/update_mappings
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/glfw-build/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug\_deps\glfw-build\src && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build _deps/glfw-build/src/edit_cache: phony _deps/glfw-build/src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/glfw-build/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug\_deps\glfw-build\src && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\Derek\CLionProjects\Project3_DSA -BC:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/src/rebuild_cache: phony _deps/glfw-build/src/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build _deps/glfw-build/src/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build _deps/glfw-build/src/CMakeFiles/install.util: CUSTOM_COMMAND _deps/glfw-build/src/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug\_deps\glfw-build\src && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/src/install: phony _deps/glfw-build/src/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build _deps/glfw-build/src/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/glfw-build/src/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug\_deps\glfw-build\src && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/src/install/local: phony _deps/glfw-build/src/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build _deps/glfw-build/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/glfw-build/src/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug\_deps\glfw-build\src && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/src/install/strip: phony _deps/glfw-build/src/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for _deps\glfw-build\src\CMakeFiles\update_mappings
+
+build _deps/glfw-build/src/CMakeFiles/update_mappings | ${cmake_ninja_workdir}_deps/glfw-build/src/CMakeFiles/update_mappings: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug\_deps\glfw-src\src && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -P C:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/CMake/GenerateMappings.cmake mappings.h.in mappings.h"
+  DESC = Updating gamepad mappings from upstream repository
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-src/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/glfw-build/docs/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug\_deps\glfw-build\docs && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build _deps/glfw-build/docs/edit_cache: phony _deps/glfw-build/docs/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/glfw-build/docs/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug\_deps\glfw-build\docs && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\Derek\CLionProjects\Project3_DSA -BC:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/docs/rebuild_cache: phony _deps/glfw-build/docs/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build _deps/glfw-build/docs/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build _deps/glfw-build/docs/CMakeFiles/install.util: CUSTOM_COMMAND _deps/glfw-build/docs/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug\_deps\glfw-build\docs && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/docs/install: phony _deps/glfw-build/docs/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build _deps/glfw-build/docs/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/glfw-build/docs/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug\_deps\glfw-build\docs && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/docs/install/local: phony _deps/glfw-build/docs/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build _deps/glfw-build/docs/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/glfw-build/docs/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Derek\CLionProjects\Project3_DSA\cmake-build-debug\_deps\glfw-build\docs && "C:\Program Files\JetBrains\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/docs/install/strip: phony _deps/glfw-build/docs/CMakeFiles/install/strip.util
+
 # =============================================================================
 # Target aliases.
+
+build Project3_DSA: phony Project3_DSA.exe
+
+build glfw: phony _deps/glfw-build/src/libglfw3.a
+
+build libglfw3.a: phony _deps/glfw-build/src/libglfw3.a
+
+build uninstall: phony _deps/glfw-build/uninstall
+
+build update_mappings: phony _deps/glfw-build/src/update_mappings
 
 # =============================================================================
 # Folder targets.
@@ -127,9 +665,30 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /Users/weh/CLionProjects/Project3_DSA/cmake-build-debug
+# Folder: C:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug
 
-build all: phony Project3_DSA
+build all: phony Project3_DSA.exe _deps/glfw-build/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build
+
+build _deps/glfw-build/all: phony _deps/glfw-build/src/all _deps/glfw-build/docs/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/docs
+
+build _deps/glfw-build/docs/all: phony
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/Derek/CLionProjects/Project3_DSA/cmake-build-debug/_deps/glfw-build/src
+
+build _deps/glfw-build/src/all: phony _deps/glfw-build/src/libglfw3.a
 
 # =============================================================================
 # Built-in targets
@@ -138,14 +697,14 @@ build all: phony Project3_DSA
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Platform/UnixPaths.cmake /Users/weh/CLionProjects/Project3_DSA/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFile.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckLibraryExists.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/ExternalProject/PatchInfo.txt.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/ExternalProject/RepositoryInfo.txt.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/ExternalProject/UpdateInfo.txt.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/ExternalProject/gitclone.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/ExternalProject/gitupdate.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/ExternalProject/shared_internal_commands.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/ExternalProject/stepscript.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/FetchContent.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/FindDoxygen.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/FindGit.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/FindOpenGL.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/FindThreads.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/Derek/CLionProjects/Project3_DSA/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeRCCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake _deps/glfw-src/CMakeLists.txt _deps/glfw-src/CMake/cmake_uninstall.cmake.in _deps/glfw-src/CMake/glfw3.pc.in _deps/glfw-src/CMake/glfw3Config.cmake.in _deps/glfw-src/docs/CMakeLists.txt _deps/glfw-src/src/CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.30/Modules/Platform/UnixPaths.cmake /Users/weh/CLionProjects/Project3_DSA/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFile.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckLibraryExists.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/ExternalProject/PatchInfo.txt.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/ExternalProject/RepositoryInfo.txt.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/ExternalProject/UpdateInfo.txt.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/ExternalProject/gitclone.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/ExternalProject/gitupdate.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/ExternalProject/shared_internal_commands.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/ExternalProject/stepscript.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/FetchContent.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/FindDoxygen.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/FindGit.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/FindOpenGL.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/FindThreads.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.3/bin/cmake/win/x64/share/cmake-3.30/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/Derek/CLionProjects/Project3_DSA/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeRCCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake _deps/glfw-src/CMakeLists.txt _deps/glfw-src/CMake/cmake_uninstall.cmake.in _deps/glfw-src/CMake/glfw3.pc.in _deps/glfw-src/CMake/glfw3Config.cmake.in _deps/glfw-src/docs/CMakeLists.txt _deps/glfw-src/src/CMakeLists.txt: phony
 
 
 #############################################
