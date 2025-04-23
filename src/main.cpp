@@ -400,33 +400,21 @@ int main() {
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
-        ImGui::Begin("Movie Recommender");
-
-        ImGui::Text("Original HashTable Recommendations:");
-        ImGui::BeginChild("orig_hash", ImVec2(0, 100), true);
-        for (const auto& line : log_originalHashRecs)
-            ImGui::Text("%s", line.c_str());
-        ImGui::EndChild();
-
-        ImGui::Text("Updated HashTable Recommendations:");
-        ImGui::BeginChild("updated_hash", ImVec2(0, 100), true);
+        // Updated HashTable Recommendations
+        ImGui::SetNextWindowPos(ImVec2(50, 50), ImGuiCond_FirstUseEver);
+        ImGui::Begin("Updated HashTable Recommendations", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
         for (const auto& line : log_updatedHashRecs)
             ImGui::Text("%s", line.c_str());
-        ImGui::EndChild();
+        ImGui::End();
 
-        ImGui::Text("Original Graph Recommendations:");
-        ImGui::BeginChild("graph_recs", ImVec2(0, 100), true);
-        for (const auto& line : log_graphRecs)
-            ImGui::Text("%s", line.c_str());
-        ImGui::EndChild();
-
-        ImGui::Text("Graph Genre Recommendations:");
-        ImGui::BeginChild("genre_recs", ImVec2(0, 100), true);
+// Genre-based Graph Recommendations (auto-focus)
+        ImGui::SetNextWindowFocus();
+        ImGui::SetNextWindowPos(ImVec2(600, 50), ImGuiCond_FirstUseEver);
+        ImGui::Begin("Genre-Based Recommendations", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
         for (const auto& line : log_genreRecs)
             ImGui::Text("%s", line.c_str());
-        ImGui::EndChild();
-
         ImGui::End();
+
 
 
         // Render
@@ -449,6 +437,9 @@ int main() {
     ImGui::DestroyContext();
     glfwDestroyWindow(window);
     glfwTerminate();
+
+
+
 
 
 

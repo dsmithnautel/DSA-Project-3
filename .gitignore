@@ -1,1 +1,3 @@
 #for installing custom ImGui
+#external/imgui/
+#build/
