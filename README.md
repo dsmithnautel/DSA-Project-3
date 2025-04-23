@@ -13,6 +13,7 @@ Once running, the program will:
 1. Load movie ratings and data
 2. Prompt the user to add their own movies with genres and ratings
    - The user input should follow the format of the examples shown when the program asks for input
+3. Once finished the user should enter 'done' to break out of the user input section
 3. Generate and display recommendations using both a graph-based and hash table-based recommender
-4. Simulate re-ratings to show updated recommendations
-5. Export a DOT file visualization (if applicable in your code)
+4. Export a DOT file visualization
+5. Viewable using ImGui is properly setup as described in the beginning
